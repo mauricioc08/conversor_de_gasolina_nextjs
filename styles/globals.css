@@ -2,26 +2,269 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(243, 243, 243);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+  height: 30rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  ;
+}
+
+h4 {
+  margin-top: 4px;
+}
+
+.bomb-photo {
+  width: 400px;
+  margin: 20px 0 0 0;
+  padding-top: 35px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.bomb-photo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
+
+.group-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  max-width: 90%;
+}
+
+.group-description p {
+  padding-bottom: 10px;
+}
+
+input#Preco1 {
+  border: solid 2px green;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+input#Preco2 {
+  border: solid 2px red;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.group-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+  width: 90%;
+  padding: 1.3rem;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 1.8rem;
+}
+
+.group-input2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1.3rem;
+  width: 20em;
+}
+
+.group-input3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1.3rem;
+  width: 60%;
+}
+
+
+.message1 {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 3, 3, 0.798);
+  text-align: center;
+}
+
+.message1 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.message2 {
+  margin-bottom: 30px;
+  padding: 20px 100px 10px 5px;
+  background: rgba(44, 140, 0, 0.833);
+  text-align: center;
+}
+
+.message2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.group-description h3 {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.group:nth-child(1) {
+  min-height: 20rem;
+}
+
+.group-input .inputs {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.group-input h3 {
+  font-size: 18px;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.inputs p {
+  margin-bottom: 8px;
+  font-size: medium;
+}
+
+.inputs {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  height: 3em;
+}
+
+.botao {
+  background-color: #0095f6;
+  color: #ffffff;
+  padding: 15px 4.7em;
+  border-radius: 4px;
+  margin-top: 15px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.botao:hover{
+  background: rgba(53, 53, 230, 0.699);
+  border: solid 1px #fff;
+}
+
+
+/* media queries */
+
+
+@media (max-width: 1024px) {
+  .wrapper {
+      width: 90%;
+  }
+
+  .group-input3 {
+      width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .bomb-photo {
+      display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+      background-color: #ffffff;
+  }
+
+  .wrapper {
+      width: 90%;
+  }
+
+  .description {
+      width: 100%;
+  }
+
+  .group {
+      border: 1px solid transparent;
+  }
+
+  .group-input3 {
+      width: 100%;
+  }
+
+  .message1 h2 {
+      width: 100%;
+  }
+
+  .message2 h2 {
+      width: 100%;
+  }
+
+
+}
+
+@media (max-width: 650px) {
+
+  .message1,
+  .message2 {
+      max-width: 100%;
+  }
+
+  .message1 h2 {
+      font-size: 150%;
+      width: 8rem;
+  }
+
+  .message2 h2 {
+      font-size: 150%;
+      width: 8rem;
+  }
 }
